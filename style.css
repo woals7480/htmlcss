@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Hahmlet", serif;
+  font-weight: 400;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.codingTitle {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.codingWrapper {
+  width: 80%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 70px;
+}
+
+.designWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.design {
+  width: 45%;
+  height: 45rem;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.design1 {
+  background-image: url("/images/myOB.png");
+}
+
+.design2 {
+  background-image: url("/images/mycaffebene.png");
+}
+
+button {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: mediumaquamarine;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cloneWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.clone {
+  width: 45%;
+  height: 45rem;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.clone1 {
+  background-image: url("/images/nike.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+
+.clone2 {
+  background-image: url("/images/compose.png");
+}
+.clone3 {
+  background-image: url("/images/earthory.png");
+}
+.clone4 {
+  background-image: url("/images/hollys.png");
+}
+.clone5 {
+  background-image: url("/images/kappa.png");
+}
+.clone6 {
+  background-image: url("/images/lush.png");
+}
+.clone7 {
+  background-image: url("/images/sorbebe.png");
+}

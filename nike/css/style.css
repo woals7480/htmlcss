@@ -1,0 +1,324 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/*50에 들어갈 폰트 : font-family: 'Monoton', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+/* 기본폰트 : font-family: 'Play', sans-serif; */
+
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#wrap{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+figure{
+    width: 100%;
+    height: 100vh;
+    background-color:#333;
+}
+
+figure video{
+    width: 100%;
+    min-width: 1600px;
+    /* 최소너비를 설정해주는 css 
+        %, vw/vh 등 상대값으로 크기를 결정할 때,
+        일정량 이상 커지거나 작아지는 것을 막기 위해
+        min-width / max-width
+        min-height / max-height
+        를 쓸 수도 있다 
+    */
+}
+
+header{
+    width: 700px;
+    /* 백그라운드 그라데이션 (방향, 색상1, 색상2, 색상3....) 
+        45deg, -45deg ....
+        to top, to right, to bottom....
+    */
+    background-image: linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031);
+    transform: skew(-40deg);
+    position: fixed;
+    top: 0;
+    left: -420px;
+    height: 100%;
+}
+
+header h1{
+    transform: skew(40deg);
+    position: absolute;
+    left: 200px;
+    top: 40px;
+}
+
+.gnb{
+    position: absolute;
+    top: 150px;
+    right:0;
+}
+
+.gnb>li>a{
+    color:#222;
+    display: block;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    font-weight: bold;
+    font-family: play;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.gnb .active>a{
+    background-color:#111;
+    color:#fff;
+}
+
+.gnb>li>a:hover{
+    background-color:#111;
+    color:#fff;
+}
+
+
+/* inline 속성에는 transform이 작동하지 않는다  */
+.gnb span{
+    transform: skew(40deg);
+    display: block;
+}
+
+.gnb>li{
+    position: relative;
+}
+.gnb .sub{
+    position: absolute;
+    left:0;
+    top:0;
+    color:#fff;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.gnb .active .sub{
+    opacity: 0.8;
+    left:205px;
+}
+
+.gnb>li:hover .sub{
+    opacity: 0.8;
+    left: 205px;
+
+}
+
+.gnb .sub a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color:#222;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #b9fb05;
+    font-family: arial;
+    transition: all 0.3s;
+}
+
+.gnb .sub li{
+    margin-bottom: 3px;
+}
+
+.gnb .sub a:hover{
+    background-color:#b9fb05;
+    color:#fff;
+}
+
+.sns{
+    color: #b9fb05;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    font-size: 25px;
+}
+
+.sns li{
+    float: left;
+    margin-left: 30px;
+    opacity: 0.5;
+    transition: all 1s;
+}
+
+.sns li:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+article{
+    position: absolute;
+    top: 200px;
+    right: 70px;
+}
+
+article p{
+    font-size: 160px;
+    color:#b9fb05;
+    font-family: monoton;
+    letter-spacing: -2px;
+}
+article p span{
+    color: #bbb;
+    font-size: 50px;
+    font-family: play;
+    font-style: italic;
+}
+
+article h2{
+    font-size: 34px;
+    color:#bbb;
+    font-family: play;
+    letter-spacing: -2px;
+    font-weight: normal;
+}
+article h2 span{
+    color:#b9fb05;
+    font-family: arial;
+    font-weight: bold;
+    margin-left:20px;
+    /* margin-left와 right는 inline요소에게도
+    적용된다  */
+}
+
+section{
+    width: 800px;
+    height: 100%;
+    /* 부모가 특정 height 값을 가지고 있을 경우에
+    height:100%를 사용하면, 부모의 높이값을 그대로 상속받는다 */
+    transform: skew(-40deg);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    right: -800px;
+    background-color: #111;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+section:hover{
+    right: -500px;
+    opacity: 0.8;
+}
+
+section:hover .con{
+    left: 50px;
+}
+
+/* 
+section에 마우스를 올리면!
+section자체:
+right:-800px->-500px
+opacity: 0.5-> 0.8
+이 움직임이 0.5초동안 지속됨 (지연효과)
+
+.con
+left: 150px -> 50px
+움직임이 1초동안 지속됨(지연효과)
+*/
+
+section .con{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 150px;
+    bottom: 0;
+    background-color: #000;
+    transition: all 1s;
+}
+
+section .conWrap{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #b9fb05;
+}
+
+section p{
+    margin-bottom: 10px;
+    opacity: 0.3;
+    transform: translateX(200px);
+}
+
+section:hover p{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .con p:nth-child(1){transition: all 0.4s;}
+section .con p:nth-child(2){transition: all 0.8s;}
+section .con p:nth-child(3){transition: all 1.2s;}
+/* 
+section에게 마우스를 올리면 p가
+200px 이동(transform:translateX(0))
+opacity : 1이 될거임
+
+첫번째 p -> 지연효과 0.4s
+두번째 p -> 지연효과 0.8s
+세번째 p -> 지연효과 1.2s
+*/
+
+section span{
+    display: block;
+    transform: skew(40deg);
+    font-weight: bold;
+}
+
+.btn{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    color: #b9fb05;
+    transform: skew(40deg);
+    font-size: 60px;
+    width: 150px;
+}
+
+.btn i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    animation-name: ani1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* easing - 주어진 시간 내에서
+    어떻게 시간을 분배하여 작동할 것인가를 설정 */
+}
+
+.btn i:nth-child(2){
+    animation-delay: 0.5s;
+}
+.btn i:nth-child(3){
+    animation-delay: 1s;
+}
+
+@keyframes ani1{
+    0%{
+        opacity: 1;
+        right: 0;
+    }
+    100%{
+        opacity: 0;
+        right: 100px;
+        transform: scale(1.5);
+    }
+}

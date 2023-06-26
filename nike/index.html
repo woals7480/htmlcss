@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NIKE</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+ <!--
+     class, id
+     class: 다중사용가능 / .box, .con, .logo.......
+     id: 고유명사 / #btn, #logo, #wrap......
+     
+     class와 id는 같이 사용할 수 있다 
+     <div class="box" id="nameBox">
+   -->
+<div id="wrap">
+<!-- figure : 시맨틱태그 (header, footer .... )
+    div의 용도로 사용하지만 각각의 용도가 정해져있는 태그
+    의미를 가지고 있는 div 
+    figure는 이미지, 영상등 미디어자료를 담기 위한 시맨틱태그
+    figcaption 태그를 사용하여 해당 이미지나 미디어자료에 대한
+    부연설명글을 삽입할 수도 있다!!!!
+-->
+    <figure>
+        <video autoplay loop type="video/mp4">
+            <source src="images/nike.mp4">
+        </video>
+    </figure>
+
+    <header>
+        <h1><a href="#"><img src="images/logo2.png"></a></h1>
+        <ul class="gnb">
+            <li class="active"><a href="#"><span>
+                <i class="fas fa-sync-alt fa-spin"></i>
+                About NIKE</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>English</span></a></li>
+                </ul>
+            </li><!--gnb의 첫번째 li-->
+
+            <li><a href="#"><span>Brand Info</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                </ul>
+            </li><!--gnb의 두번째 li-->
+
+            <li><a href="#"><span>Community</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                </ul>
+            </li><!--gnb의 세번째 li-->
+
+            <li><a href="#"><span>Prouct Value</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>Sub</span></a></li>
+                    <li><a href="#"><span>Sub</span></a></li>
+                </ul>
+            </li><!--gnb 네번째 li-->
+
+            <li><a href="#"><span>Company History</span></a>
+                <ul class="sub">
+                    <li><a href="#"><span>Sub</span></a></li>
+                </ul>
+            </li><!--gnb 다섯번째 li-->
+        </ul><!--gnb-->
+    
+    </header>
+
+    <ul class="sns">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+
+    <!--시맨틱태그 : header footer figure section...
+        + article 
+        글자 뭉치 , 문단 묶음용 레이아웃 태그 
+    -->
+    <article>
+        <p>50<span>/24</span></p>
+        <h2>Best Qualified <span>AIR MAX</span></h2>
+    </article>
+
+    <section>
+        <div class="con">
+            <div class="conWrap">
+                <p>
+                    <span>Event & Community</span>
+                    <a href="#">
+                        <img src="images/pic1.png">
+                    </a>
+                </p>
+
+                <p>
+                    <span>News & Notice</span>
+                    <a href="#">
+                        <img src="images/pic2.png">
+                    </a>
+                </p>
+
+                <p>
+                    <span>Product Review</span>
+                    <a href="#">
+                        <img src="images/pic3.png">
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="btn">
+            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-left"></i>
+        </div>
+    </section>
+    
+</div><!--wrap-->
+
+
+
+<script src="https://kit.fontawesome.com/caf6a2635a.js" crossorigin="anonymous"></script>
+</body>
+</html>

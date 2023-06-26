@@ -1,0 +1,287 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* header */
+
+header{}
+
+
+header .wrap{
+    width: 980px;
+    height: 78px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+.gnb :after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gnb{
+    position: absolute;
+    right: 0;
+    top: 30px;
+
+}
+
+.gnb li{
+    float: left;
+    color: #323232;
+    background-image: url(../images/line.jpg);
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.gnb li:first-child{
+    background-image: none;
+}
+
+.mv{
+    height: 600px;
+    background-image: url(../images/slider1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mv a {
+    display: block;
+    height: 600px;
+    /* font-size: 0; */
+    text-indent: -9999px;
+    /*
+    들여쓰기 속성
+    들여쓰기를 위해서도 쓰이지만
+    웹접근성(시각장애인 등 눈으로 보는 웹페이지를
+    사용하지 않는 사람들을 위해 텍스트 만으로
+    웹을 이용할 수 있게끔 만드는 작업)
+    을 맞추기 위해서도 사용된다.
+    주로 블록요소 내에서 글자를 보이지않게 하기 위해 쓰인다.
+     */
+}
+
+.con{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.con h3{
+    color: #b3917c;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.con h3 span{
+    font-weight: normal;
+}
+
+.box:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box{
+}
+
+.box1{
+    display: inline-block;
+
+}
+
+.box1 img{
+    margin-bottom: 14px;
+}
+
+.box1 .tit{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box1 .txt{
+    font-size: 13px;
+}
+
+.section{
+    background-image: url(../images/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 30px;
+}
+
+.section h3{
+    color: #fff;
+    font-size: 24px;
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section h3 span{
+    font-weight: normal;
+}
+
+.section .container{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+.section .container:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.section .container .vid{
+    width: 470px;
+    height: 270px;
+    background-color: lawngreen;
+    float: left;
+}
+
+.section .container ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.section .container ul{
+    width: 481px;
+    float: right;
+}
+.section .container ul li{
+    width: 157px;
+    height: 130px;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.section .container ul li:nth-child(3),
+.section .container ul li:last-child{
+    margin-right: 0;
+}
+
+
+.section .container ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    color: #ababab;
+    background-color: #171717;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.fWrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fWrap div{
+    width: 326px;
+    float: left;
+}
+
+.fWrap{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fWrap h4{
+    color: #b3917b;
+    font-size: 16px;
+}
+
+.fWrap .yellow{
+    color: yellow;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.fWrap div p{
+    color: #fff;
+}
+
+.fWrap div p a{
+    font-size: 14px;
+}
+
+.fWrap .time{
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+address{
+    font-style: normal;
+}
+
+.news{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.news li:before{content: '·';}
+
+.news li{
+    margin-bottom: 5px;
+}
+
+.news li:hover{
+    text-decoration: underline;
+}
+/* 
+요소이름:after{content:' ';}
+요소이름:before{content:' ';}
+
+해당요소 내에 가짜구조를 마지막자식/ 첫번째 자식으로
+추가하게끔 하는 css 가상선택자
+기본적으로 인라인요소
+*/
+
+.sns:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.sns{
+    margin-top: 10px;
+}
+
+.sns li{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
